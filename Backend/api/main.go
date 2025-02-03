@@ -1,6 +1,9 @@
 package main
 
-import "net/http"
+import (
+	"log"
+	"net/http"
+)
 
 type App struct {
 	Domain string
@@ -12,8 +15,8 @@ func main() {
 	var app App
 	app.Domain = "example.com"
 
-	err := http.ListenAndServe(":6969",app.router())
-	if err!=nil{
+	err = http.ListenAndServe(":6969", app.router())
+	if err != nil {
 		log.Fatal(err)
 	}
 }
