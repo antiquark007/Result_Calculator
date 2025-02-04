@@ -7,9 +7,10 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
+	_ "github.com/lib/pq"
 )
 
-func(app *App) conntodb() (*sql.DB, error) {
+func (app *App) conntodb() (*sql.DB, error) {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal(err)
@@ -18,10 +19,10 @@ func(app *App) conntodb() (*sql.DB, error) {
 	dbpass := os.Getenv("POSTGRES_PASSWORD")
 	dbname := os.Getenv("POSTGRES_DB")
 	dbhost := "localhost"
-	dbport := 5432
+	dbport := 5433
 
-	connstr := fmt.Sprint("postgres://%s:%s@%s:%s/%s?sslmode=disable", dbuser, dbpass, dbhost, dbport, dbname)
-
+	connstr := fmt.Sprintf("postgres://%s:%s@%s:%d/%s?sslmode=disable", dbuser, dbpass, dbhost, dbport, dbname)
+    fmt.Print(connstr)
 	db, err := sql.Open("postgres", connstr)
 	if err != nil {
 		log.Fatal(err)
