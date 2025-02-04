@@ -1,12 +1,14 @@
 import React from 'react';
-import NavigationBar from '../components/NavigationBar';
+import Header from '../components/Header';
+import Body from '../components/Body';
+import './Home.css'
 
 const Home: React.FC = () => {
 
   return(
     <>
-    <NavigationBar/>
-    <h1>this is home page</h1>
+    <Header/>
+    <Body/>
     </>
   )
 };

@@ -1,0 +1,43 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+}
+header {
+    background-color:#2a4365;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar-user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-username {
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
+  .navbar-login {
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  .sign-up{
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #dfe4eb;
+    background-color: #2a4365;
+    border: #2a4365;
+    border-radius: 2rem;
+  }
