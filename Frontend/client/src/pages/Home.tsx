@@ -1,7 +1,14 @@
 import React from 'react';
+import NavigationBar from '../components/NavigationBar';
 
 const Home: React.FC = () => {
-  return <h1>Home Page</h1>;
+
+  return(
+    <>
+    <NavigationBar/>
+    <h1>this is home page</h1>
+    </>
+  )
 };
 
 export default Home;
