@@ -13,5 +13,6 @@ func (app *App) router() http.Handler {
 	mux.Use(middleware.Logger)
 	mux.Use(app.enableCORS)
 	mux.Get("/Home",app.Home)
+	mux.Post("/Login",app.Login)
 	return mux
 }
