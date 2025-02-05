@@ -14,6 +14,7 @@ func (app *App) router() http.Handler {
 	mux.Use(app.enableCORS)
 	mux.Get("/Home",app.Home)
 	mux.Post("/Login",app.Login)
+	mux.Post("/Register",app.RegisterUser)
 	mux.Get("/Logout",app.Logout)
 	mux.Get("/RefreshToken",app.RefreshHandler)
 	return mux
