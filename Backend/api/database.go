@@ -33,6 +33,6 @@ func (app *App) conntodb() (*sql.DB, error) {
 	} else {
 		fmt.Println("Connected to the database")
 	}
-	defer db.Close()
+	
 	return db, err
 }
