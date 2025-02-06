@@ -21,6 +21,7 @@ func main() {
 	if err!=nil{
 		log.Fatal(err)
 	}
+	defer app.DB.Close()
 	err = http.ListenAndServe(":6969", app.router())
 	if err != nil {
 		log.Fatal(err)
