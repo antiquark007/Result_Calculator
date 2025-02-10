@@ -1,2 +1,5 @@
 .env
-.TestFrontend/client
+TestFrontend/
+node_modules/
+.DS_Store
+*.log
